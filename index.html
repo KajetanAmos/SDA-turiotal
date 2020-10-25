@@ -7,6 +7,7 @@
     >
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
 </head>
 <body>
     <h1 class="main__title">
@@ -19,6 +20,7 @@
         <p class="article__abstract">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nulla vitae condimentum tincidunt, felis mauris volutpat nisi, non varius diam mi vel ligula. Nunc ut lacinia est. Donec convallis eleifend arcu, et porta tortor interdum non. Vestibulum sit amet condimentum eros. Aliquam erat volutpat. Vivamus rhoncus, risus id finibus ultricies, tellus neque maximus neque, et porttitor erat dui eget magna. Fusce ac neque vel libero mattis faucibus eget ullamcorper mi. Sed eu dictum turpis, vitae iaculis magna. Ut felis metus, euismod quis neque eget, dapibus congue leo. Vivamus auctor tristique suscipit.
         </p>
+        <button id="toggle-article">Show article</button>
        <main class="article__main">
         <p class="article__para">
             Sed condimentum diam ut quam ornare elementum. Sed ut diam sagittis, mattis dui vitae, sagittis felis. Nullam hendrerit ex eget euismod bibendum. In dui libero, viverra ut eleifend consectetur, posuere ut lacus. Donec efficitur aliquam eros sit amet feugiat. Cras vulputate diam sed rutrum sodales. Suspendisse aliquet leo eget justo congue pulvinar. Cras lorem tortor, eleifend et rhoncus id, condimentum in odio. Aliquam vitae convallis elit. Curabitur eget blandit tellus. Nulla nec risus eget ipsum tristique tempus sit amet eu dui.
@@ -31,5 +33,38 @@
         </p>
     </main>
     </article>
+    <div class="comments">
+        <form>
+            <h3 class="comment__title">Add Comment</h3>
+            <div class="comment__form--container">
+                <label for="name--input">Enter name</label>
+                <input 
+                type="text" 
+                name="name--input" 
+                id="name--input"
+                class="comment--input"
+                >
+            </div>
+            <div class="comment__form--container">
+                <label for="comment--input">Comment</label>
+                <textarea 
+                name="comment--input" 
+                id="comment--input" 
+                cols="30" 
+                rows="10"
+                class="comment--input"
+                >
+            </textarea>
+            </div>
+            <button 
+            type="button" 
+            id="add--coment-button"
+            >
+                Add comment
+
+            </button>
+        </form>
+    </div>
+
 </body>
 </html>
