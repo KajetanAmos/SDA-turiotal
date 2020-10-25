@@ -25,9 +25,29 @@ const comment = {
     name: nameInput.value,
     content: commentInput.value
 }
-console.log(validateComment(comment))
+if (validateComment(comment)){
+    appendComment(comment)
+}else
+console.warn("Comment is not valid")
+
 }
+
+
 function validateComment(comment){
     const {name, content} = comment;
     return name.length && content.length ? true :false
+}
+function appendComment (comment){
+    const node = document.createElement("div")
+    const nameSection = document.createElement("p")
+    const contentSection = document.createElement("p")
+    const commentsList = document.querySelector(".comments__list")
+    nameSection.innerHTML = comment.name
+    contentSection.innerHTML = comment.content
+    
+    node.appendChild(nameSection)
+    node.appendChild(contentSection)
+
+    commentsList.appendChild(node)
+    
 }
