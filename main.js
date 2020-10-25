@@ -2,6 +2,7 @@ window.addEventListener("load", ()=>{
     console.log("app has been loaded")
     const toggleButton = document.getElementById("toggle-article")
     const addCommentButton = document.getElementById("add-comment-button")
+    const clearCommentsButton = document.getElementById("clear-comments-button")
     toggleButton.addEventListener("click",()=>{
         const mainSection = document.querySelector(".article__main")
         const isArticleVisable = mainSection.style.display === "block" ? true : false
@@ -10,6 +11,9 @@ window.addEventListener("load", ()=>{
     })
     addCommentButton.addEventListener("click", () => {
     addComment();
+    })
+    clearCommentsButton.addEventListener("click", ()=>{
+        clearComments()
     })
 });
 function toggleMainSection(show){
@@ -50,4 +54,10 @@ function appendComment (comment){
 
     commentsList.appendChild(node)
     
+}
+
+function clearComments(){
+    const commentsList = document.querySelector(".comments__list")
+
+    commentsList.innerHTML = ""
 }
